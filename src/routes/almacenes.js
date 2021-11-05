@@ -13,7 +13,6 @@ hash = hmac.digest('base64');
 console.log(hash);
 
 router.get("almacenes.index",'/', async (ctx) => {
- 
   const res = await fetch('https://dev.api-bodega.2021-2.tallerdeintegracion.cl/bodega/almacenes', {
     headers: { "Content-Type": "application/json",
                "Authorization": "INTEGRACION grupo12:PULangO9FJxBF29wQfK/a2hRB20="
@@ -21,6 +20,9 @@ router.get("almacenes.index",'/', async (ctx) => {
   })
   const almacenes = await res.json();
   console.log(almacenes);
+  await ctx.render('index',{
+  	almacenes
+  	});
 })
 
 module.exports = router;
