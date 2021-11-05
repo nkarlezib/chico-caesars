@@ -7,9 +7,9 @@ const router = new KoaRouter();
 const key = "O8vKmNc.6XL0K1";
 
 hmac = crypto.createHmac("sha1", key);
-hmac.update("POST");
+hmac.update("GET6167752d51533a000492234b");
 hash = hmac.digest('base64');
-console.log("Method 2: ", "INTEGRACION grupo12:"+String(hash));
+console.log("Method 4: ", "INTEGRACION grupo12:"+String(hash));
 
 router.post('moverStock', '/', async (ctx) => {
   try {
