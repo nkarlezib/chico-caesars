@@ -8,7 +8,7 @@ const router = new KoaRouter();
 const key = "O8vKmNc.6XL0K1";
 
 hmac = crypto.createHmac("sha1", key);
-hmac.update("GET");
+hmac.update("GET6167752d51533a000492234d5");
 hash = hmac.digest('base64');
 console.log(hash);
 
